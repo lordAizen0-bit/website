@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #503740; /* Soft lavender background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      position: relative; /* Added for absolute positioning */
+    }
+
+    .background-heart {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("heart-shape-doodle-pattern-seamless-free-png.webp"); 
+      background-size: 200px; 
+      opacity: 0.1; 
+      pointer-events: none; 
+    }
+
+    .page {
+      padding: 20px;
+      text-align: center;
+      display: none; 
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background-color: #ff3355;
+      transform: scale(1.05); /* Add scaling effect on hover */
+    }
+
+    h1 {
+      font-size: 28px;
+      color: bl;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-family: 'Brush Script MT', cursive; /* Romantic font style */
+    }
+
+    p {
+      font-size: 18px;
+      color: #6a4e77; /* Soft purple text color */
+      line-height: 1.6; /* Increased line height for better readability */
+      margin-bottom: 20px;
+    }
+
+    ul {
+      text-align: left;
+      color: #6a4e77; /* Soft purple text color */
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Heart animation */
+    .heart {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('heart.png'); /* Add your heart image */
+      background-size: contain;
+      animation: float 4s infinite ease-in-out; /* Heart floating animation */
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Romantic background image */
+    .romantic-bg {
+      background-image: url("download.jpeg"); /* Add a romantic background image */
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Ensure the background stays behind the content */
+      opacity: 0.8; /* Adjust the opacity of the background */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Romantic background image -->
+    <div class="romantic-bg"></div>
+
+    <!-- Heart animation -->
+    <div class="heart"></div>
+
+    <!-- Background heart pattern -->
+    <div class="background-heart"></div>
+
+    <div class="page" id="page1" style="display: block;">
+      <h1>Here a Small Gift from me</h1>
+      <p>ON Completing one year of our friendship here's I'm expressing my Feelings </p>
+      <p>And I know we'r in a relationship and thats also going to complete its one year</p>
+      <button class="button" onclick="nextPage()">Let's Begin</button>
+    </div>
+    <div class="page" id="page2">
+      <h1>so shall I start</h1>
+      <p>I'm hoping that you are seeing this on 7th july,In last year on the same day we met first time and talked with each other,
+      This whole one year is like a dream for me thank you babe.I hope we will be Together for our life.</p>
+      <button class="button" onclick="prevPage()">prev</button>
+      <button class="button" onclick="nextPage()">next</button>
+    </div>
+    <div class="page" id="page3">
+      <h1>what I really feel</h1>
+      <p>I'm sorry,I always make you disappointed and never make up for your expectations & for being careless also 
+      and for the most to make you cry not only 1 time but i did that 2 times.</p>
+      <button class="button" onclick="prevPage()">prev</button>
+      <button class="button" onclick="nextPage()">next</button>
+    </div>
+    <div class="page" id="page4">
+      <h1>Yes i know you don't want to here about all this, </h1>
+      <p>but I'm writing what I feel.</p>
+      <button class="button" onclick="prevPage()">prev</button>
+      <button class="button" onclick="nextPage()">next</button>
+    </div>
+    <div class="page" id="page5">
+      <h1>thank you for being with me with all this time</h1>
+      <p>that last year was my best year in my whole 20 years of life, 
+        I was nothing but just being happy all the time around you.</p>
+      <button class="button" onclick="prevPage()">prev</button>
+      <button class="button" onclick="nextPage()">next</button>
+    </div>
+    <div class="page" id="page6">
+      <h1>but unfortunately......</h1>
+      <p>Now its look like you are just ignoring me..., and thats hurt a lot....</p>
+      <button class="button" onclick="prevPage()">prev</button>
+      <button class="button" onclick="nextPage()">next</button>
+    </div>
+    <div class="page" id="page7">
+      <h1>Aaaahhhhh.......where its going</h1>
+      <p>It was never meant to be like this but now I also don't know what I'm typing </p>
+      <P>for on this special occasion you can ask me for whatever you want.</P>
+      <button class="button" onclick="prevPage()">prev</button>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 1;
+
+    function nextPage() {
+      const currentPageElement = document.getElementById('page' + currentPage);
+      if (currentPageElement) {
+        currentPageElement.style.display = 'none';
+      }
+      currentPage++;
+      const nextPageElement = document.getElementById('page' + currentPage);
+      if (nextPageElement) {
+        nextPageElement.style.display = 'block';
+      }
+    }
+
+    function prevPage() {
+      const currentPageElement = document.getElementById('page' + currentPage);
+      if (currentPageElement) {
+        currentPageElement.style.display = 'none';
+      }
+      currentPage--;
+      const prevPageElement = document.getElementById('page' + currentPage);
+      if (prevPageElement) {
+        prevPageElement.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
